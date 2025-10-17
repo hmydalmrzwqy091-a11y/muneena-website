@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muneena Perfume — Muneena</title>
+  <style>
+    :root{
+      --bg: rgb(250,237,182);
+      --accent: #c9b68b;
+      --text:#2b2b2b;
+      --muted:#6b6b6b;
+      --card:#fff;
+      --radius:14px;
+      --container:1100px;
+      --transition:200ms ease;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:var(--text);background:var(--bg);}
+    .wrap{max-width:var(--container);margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:16px}
+    .brand img{height:84px;width:auto;border-radius:10px;object-fit:cover}
+    .brand h1{margin:0;font-size:28px;letter-spacing:2px}
+    nav a{margin:0 10px;text-decoration:none;color:var(--text);font-weight:600}
+    .lang-toggle{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:8px 12px;border-radius:8px;cursor:pointer}
+
+    /* Hero */
+    .hero{display:flex;gap:30px;align-items:center;padding:40px 0}
+    .hero-left{flex:1}
+    .hero h2{font-size:36px;margin:0 0 8px}
+    .hero p{margin:0 0 18px;color:var(--muted)}
+    .cta{display:inline-block;padding:12px 18px;border-radius:10px;background:var(--text);color:white;text-decoration:none}
+
+    /* Sections */
+    section{padding:34px 0}
+    .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+
+    /* Products */
+    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .product{padding:14px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.95));text-align:left}
+    .product img{max-width:100%;height:200px;object-fit:cover;border-radius:10px}
+    .price{font-weight:700;margin-top:8px}
+    .product h4{margin:8px 0 6px}
+    .desc{color:var(--muted);font-size:14px;margin-top:8px;line-height:1.4}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    form label{display:block;margin-bottom:8px;font-weight:600}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #ddd;margin-bottom:12px}
+    button[type=submit]{background:var(--text);color:white;padding:10px 14px;border-radius:10px;border:0;cursor:pointer}
+
+    footer{padding:18px 0;color:var(--muted);text-align:center}
+
+    /* small screens */
+    @media(max-width:820px){
+      .contact-grid{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start}
+      .hero{flex-direction:column}
+      .brand img{height:64px}
+    }
+
+    /* Arabic direction when active */
+    html[lang="ar"]{direction:rtl}
+    html[lang="ar"] .brand h1{font-family: 'Times New Roman', serif}
+    .section-title{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .section-title h3{margin:0}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <!-- use provided logo -->
+        <img src="/mnt/data/WhatsApp Image 2025-10-17 at 21.31.28_5b16e2a0.jpg" alt="Muneena logo">
+        <div>
+          <h1 data-en> Muneena Perfume</h1>
+          <h1 data-ar style="display:none"> مونة للعطور </h1>
+          <div style="color:var(--muted);font-size:13px">Dukhun — بخور</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#home" data-en>Home</a>
+        <a href="#about" data-en>About</a>
+        <a href="#products" data-en>Products</a>
+        <a href="#contact" data-en>Contact</a>
+
+        <a href="#home" data-ar style="display:none">الرئيسية</a>
+        <a href="#about" data-ar style="display:none">من نحن</a>
+        <a href="#products" data-ar style="display:none">المنتجات</a>
+        <a href="#contact" data-ar style="display:none">اتصل بنا</a>
+
+        <button class="lang-toggle" id="langBtn">ع / EN</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-left">
+          <h2 data-en>Welcome to Muneena Perfume</h2>
+          <h2 data-ar style="display:none">مرحبا بكم في مونة للعطور</h2>
+          <p data-en>Handcrafted dukhun made with love. Pure, long-lasting fragrance for your home and special moments.</p>
+          <p data-ar style="display:none">بخور مصنوع يدويًا بعناية. عطر نقي يدوم طويلاً لمنزلك ولحظاتك المميزة.</p>
+
+          <a class="cta" href="#products" data-en>Shop our Dukhun & Perfumes</a>
+          <a class="cta" href="#products" data-ar style="display:none">تسوق البخور والعطور</a>
+        </div>
+        <div style="flex:0 0 300px">
+          <div class="card" style="text-align:center">
+            <!-- hero logo -->
+            <img src="/mnt/data/WhatsApp Image 2025-10-17 at 21.31.28_5b16e2a0.jpg" alt="logo" style="max-width:180px;margin:0 auto 12px;display:block">
+            <div style="font-size:14px;color:var(--muted)" data-en>Signature: Dukhun</div>
+            <div style="font-size:14px;color:var(--muted);display:none" data-ar>النوع: بخور</div>
+            <div style="margin-top:12px;font-weight:700">RGB: 250,237,182</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="card">
+          <h3 data-en>About Muneena</h3>
+          <h3 data-ar style="display:none">عن مونة</h3>
+          <p data-en>
+            Muneena Perfume crafts traditional dukhun using premium natural resins and oils. Our scents are inspired by heritage and tailored for modern homes.
+          </p>
+          <p data-ar style="display:none">
+            مونة للعطور تصنع البخور التقليدي باستخدام راتنجات وزيوت طبيعية عالية الجودة. عطورنا مستوحاة من التراث ومصممة لتناسب المنازل العصرية.
+          </p>
+        </div>
+      </section>
+
+      <section id="products">
+        <div class="card">
+          <div class="section-title">
+            <div>
+              <h3 data-en>Products</h3>
+              <h3 data-ar style="display:none">المنتجات</h3>
+              <div style="color:var(--muted);font-size:13px" data-en>Categories: Dukhun (Incense) & Perfumes</div>
+              <div style="color:var(--muted);font-size:13px;display:none" data-ar>التصنيفات: بخور وعطور</div>
+            </div>
+          </div>
+
+          <!-- Dukhun Category -->
+          <div style="margin-top:18px;">
+            <h4 data-en>Dukhun — Incense</h4>
+            <h4 data-ar style="display:none">بخور — دُخون</h4>
+            <div class="products" style="margin-top:12px;">
+              <!-- Dukhun Al-Malaki -->
+              <div class="product">
+                <img src="/mnt/data/WhatsApp Image 2025-10-17 at 15.09.52_d2faf71b.jpg" alt="Dukhun Al-Malaki">
+                <h4 data-en>Royal Incense — Dukhun Al-Malaki</h4>
+                <h4 data-ar style="display:none">دخون الملكي 👑</h4>
+                <div class="price">150 AED — <span data-ar style="display:none">١٥٠ درهم</span></div>
+                <div class="desc" data-en>👑 A blend that embodies the luxury of Arabian oud and the elegance of French oud. ✨</div>
+                <div class="desc" data-ar style="display:none">👑 مزيج يجسد فخامة العود العربي وأناقة العود الفرنسي. ✨</div>
+              </div>
+
+              <!-- Dukhun Arayes -->
+              <div class="product">
+                <img src="/mnt/data/WhatsApp Image 2025-10-17 at 15.09.52_d2faf71b.jpg" alt="Dukhun Arayes">
+                <h4 data-en>Arayes Incense — Dukhun Arayes</h4>
+                <h4 data-ar style="display:none">دخون عرايس</h4>
+                <div class="price">185 AED — <span data-ar style="display:none">١٨٥ درهم</span></div>
+                <div class="desc" data-en>Arayes: A scent of luxurious amber and authentic Arabian notes. ❣</div>
+                <div class="desc" data-ar style="display:none">عرايس: عبير من عنبر فاخر ونفحات عربية أصيلة. ❣</div>
+              </div>
+
+              <!-- Dukhun Muneena -->
+              <div class="product">
+                <img src="/mnt/data/WhatsApp Image 2025-10-17 at 15.09.52_d2faf71b.jpg" alt="Dukhun Muneena">
+                <h4 data-en>Minina / Muneena Incense — Dukhun Muneena</h4>
+                <h4 data-ar style="display:none">دخون منينه</h4>
+                <div class="price">165 AED — <span data-ar style="display:none">١٦٥ درهم</span></div>
+                <div class="desc" data-en>Luxury incense — Deep notes of authentic oud chips, exuding a luxury that expresses the essence of authenticity and sophistication.</div>
+                <div class="desc" data-ar style="display:none">دخون فاخر — نفحات عميقة من كسرات العود الأصيلة، تفوح بفخامة تعبّر عن جوهر الأصالة والرقي. ✨🤎</div>
+              </div>
+
+              <!-- Dukhun Al-Mafnood -->
+              <div class="product">
+                <img src="/mnt/data/WhatsApp Image 2025-10-17 at 15.09.52_d2faf71b.jpg" alt="Dukhun Al-Mafnood">
+                <h4 data-en>Minafoud Incense — Dukhun Al-Mafnood</h4>
+                <h4 data-ar style="display:none">دخون المفنود</h4>
+                <div class="price">200 AED — <span data-ar style="display:none">٢٠٠ درهم</span></div>
+                <div class="desc" data-en>Luxury Arabian incense — A touch of musk and rose creates a warm, elegant scent that leaves an unforgettable impression. 🤍✨</div>
+                <div class="desc" data-ar style="display:none">دخون عربي فاخر — لمسة من المسك والورد تعبق برائحة الدفء والأناقة، تترك أثرًا لا يُنسى. 🤍✨</div>
+              </div>
+
+              <!-- Dukhun Sheikha Al-Sheikhat -->
+              <div class="product">
+                <img src="/mnt/data/WhatsApp Image 2025-10-17 at 15.09.52_d2faf71b.jpg" alt="Dukhun Sheikha">
+                <h4 data-en>Sheikha Al-Sheikhat Incense</h4>
+                <h4 data-ar style="display:none">دخون شيخه الشيخات</h4>
+                <div class="price">150 AED — <span data-ar style="display:none">١٥٠ درهم</span></div>
+                <div class="desc" data-en>Between Arabian scent and a French touch — a blend of authenticity and sophistication that recalls brides’ splendor and queens’ elegance. 🤍👑</div>
+                <div class="desc" data-ar style="display:none">بين الرائحة العربية واللمسة الفرنسية — مزيج من الأصالة والرقي، يفوح بعطرٍ يحكي فخامة العرايس وأناقة الملكات. 🤍👑</div>
+              </div>
+
+              <!-- Dukhun Mira -->
+              <div class="product">
+                <img src="/mnt/data/WhatsApp Image 2025-10-17 at 15.09.52_d2faf71b.jpg" alt="Dukhun Mira">
+                <h4 data-en>Mira Incense — Dukhun Mira</h4>
+                <h4 data-ar style="display:none">دخون ميره</h4>
+                <div class="price">80 AED — <span data-ar style="display:none">٨٠ درهم</span></div>
+                <div class="desc" data-en>A soft fragrance that delicately touches the senses — silky feminine French notes that linger in memory. 🌷</div>
+                <div class="desc" data-ar style="display:none">عبير ناعم يلامس الحواس برقةٍ تشبه اللمسة الحريرية… نفحات فرنسية أنثوية تبقى في الذاكرة. 🌷</div>
+              </div>
+
+              <!-- Dukhun Rawdah -->
+              <div class="product">
+                <img src="/mnt/data/WhatsApp Image 2025-10-17 at 15.09.52_d2faf71b.jpg" alt="Dukhun Rawdah">
+                <h4 data-en>Rawdah Incense — Dukhun Rawdah</h4>
+                <h4 data-ar style="display:none">دخون روضه</h4>
+                <div class="price">80 AED — <span data-ar style="display:none">٨٠ درهم</span></div>
+                <div class="desc" data-en>Soft French notes exuding sophistication — expresses refined taste and simple elegance.</div>
+                <div class="desc" data-ar style="display:none">نفحات فرنسية ناعمة تفوح برقيّ، تعبّر عن الذوق الرفيع والأناقة البسيطة.</div>
+              </div>
+
+              <!-- Oud Hassa -->
+              <div class="product">
+                <img src="/mnt/data/WhatsApp Image 2025-10-17 at 15.09.52_d2faf71b.jpg" alt="Oud Hassa">
+                <h4 data-en>Hassa Oud — Oud Hassa</h4>
+                <h4 data-ar style="display:none">العود حصه</h4>
+                <div class="price">350 AED — <span data-ar style="display:none">٣٥٠ درهم</span></div>
+                <div class="desc" data-en>Premium oud — rich, deep and long-lasting oud aroma prized for special occasions.</div>
+                <div class="desc" data-ar style="display:none">عود فاخر — عبير غني وعميق يدوم طويلاً، مثالي للمناسبات الخاصة.</div>
+              </div>
+
+              <!-- Royal Oud -->
+              <div class="product">
+                <img src="/mnt/data/WhatsApp Image 2025-10-17 at 15.09.52_d2faf71b.jpg" alt="Royal Oud">
+                <h4 data-en>Royal Oud</h4>
+                <h4 data-ar style="display:none">العود الملكي</h4>
+                <div class="price">350 AED — <span data-ar style="display:none">٣٥٠ درهم</span></div>
+                <div class="desc" data-en>Opulent royal oud with a majestic presence — perfect for gifting or signature moments.</div>
+                <div class="desc" data-ar style="display:none">عود ملكي فاخر ذو حضور مهيب — مناسب كهدية أو للحظات المميزة.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Perfumes Category -->
+          <div style="margin-top:28px;">
+            <h4 data-en>Perfumes — Al-Farsh</h4>
+            <h4 data-ar style="display:none">عطور — عطر الفراش</h4>
+            <div class="products" style="margin-top:12px;">
+              <!-- Muneena Al-Farsh -->
+              <div class="product">
+                <img src="/mnt/data/WhatsApp Image 2025-10-17 at 15.05.16_ca380ac6.jpg" alt="Muneena Perfume">
+                <h4 data-en>Minina Al-Farsh Perfume — Muneena Al-Farsh</h4>
+                <h4 data-ar style="display:none">عطر الفراش منينه</h4>
+                <div class="price">120 AED — <span data-ar style="display:none">١٢٠ درهم</span></div>
+                <div class="desc" data-en>Minina Al-Farsh Perfume — elegant spray with soft lasting notes. 120 AED.</div>
+                <div class="desc" data-ar style="display:none">عطر الفراش منينه — رشة أنيقة بنفحات ناعمة تدوم طويلاً. ١٢٠ درهم.</div>
+              </div>
+
+              <!-- Royal Al-Farsh -->
+              <div class="product">
+                <img src="/mnt/data/WhatsApp Image 2025-10-17 at 15.05.16_ca380ac6.jpg" alt="Royal Perfume">
+                <h4 data-en>Royal Al-Farsh Perfume</h4>
+                <h4 data-ar style="display:none">عطر الفراش الملكي</h4>
+                <div class="price">120 AED — <span data-ar style="display:none">١٢٠ درهم</span></div>
+                <div class="desc" data-en>Royal Al-Farsh — regal fragrance with refined notes for a royal touch. 120 AED.</div>
+                <div class="desc" data-ar style="display:none">عطر الفراش الملكي — عطر ملكي بنفحات راقية يمنح لمسة فخمة. ١٢٠ درهم.</div>
+              </div>
+
+              <!-- Rawdah Al-Farsh -->
+              <div class="product">
+                <img src="/mnt/data/WhatsApp Image 2025-10-17 at 15.05.16_ca380ac6.jpg" alt="Rawdah Perfume">
+                <h4 data-en>Rawdah Al-Farsh Perfume</h4>
+                <h4 data-ar style="display:none">عطر فراش روضه</h4>
+                <div class="price">80 AED — <span data-ar style="display:none">٨٠ درهم</span></div>
+                <div class="desc" data-en>Rawdah Al-Farsh — soft floral notes, light and fresh. 80 AED.</div>
+                <div class="desc" data-ar style="display:none">عطر فراش روضه — نفحات زهرية ناعمة، خفيفة ومنعشة. ٨٠ درهم.</div>
+              </div>
+
+              <!-- Mira Al-Farsh -->
+              <div class="product">
+                <img src="/mnt/data/WhatsApp Image 2025-10-17 at 15.05.16_ca380ac6.jpg" alt="Mira Perfume">
+                <h4 data-en>Mira Al-Farsh Perfume</h4>
+                <h4 data-ar style="display:none">عطر فراش ميرة</h4>
+                <div class="price">80 AED — <span data-ar style="display:none">٨٠ درهم</span></div>
+                <div class="desc" data-en>Mira Al-Farsh — gentle feminine scent with lasting elegance. 80 AED.</div>
+                <div class="desc" data-ar style="display:none">عطر فراش ميرة — رائحة أنثوية لطيفة مع لمسة من الأناقة. ٨٠ درهم.</div>
+              </div>
+
+              <!-- Hair Makhmariyah -->
+              <div class="product">
+                <img src="/mnt/data/WhatsApp Image 2025-10-17 at 15.05.16_ca380ac6.jpg" alt="Hair Makhmariyah">
+                <h4 data-en>Hair Makhmariyah</h4>
+                <h4 data-ar style="display:none">مخمريه للشعر</h4>
+                <div class="price">175 AED — <span data-ar style="display:none">١٧٥ درهم</span></div>
+                <div class="desc" data-en>Hair Makhmariyah — nourishing hair fragrance/oil with a pleasant lingering scent. 175 AED.</div>
+                <div class="desc" data-ar style="display:none">مخمريه للشعر — زيت/عطر للشعر يغذي ويمنح رائحة لطيفة تدوم. ١٧٥ درهم.</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h3 data-en>Contact Us</h3>
+        <h3 data-ar style="display:none">تواصل معنا</h3>
+        <div class="contact-grid">
+          <div>
+            <div class="card">
+              <p data-en>Phone: <strong><a href="tel:+971562877616">+971 56 287 7616</a></strong></p>
+              <p data-ar style="display:none">الهاتف: <strong><a href="tel:+971562877616">+971 56 287 7616</a></strong></p>
+              <p data-en>Instagram: <a href="https://instagram.com/muneena.perfumes" target="_blank">@muneena.perfumes</a></p>
+              <p data-ar style="display:none">انستقرام: <a href="https://instagram.com/muneena.perfumes" target="_blank">@muneena.perfumes</a></p>
+            </div>
+
+            <div style="margin-top:12px;font-size:13px;color:var(--muted)">
+              <p data-en>Want to order? Message us on WhatsApp or call — we respond quickly.</p>
+              <p data-ar style="display:none">للطلب، راسلنا على واتساب أو اتصل — نرد بسرعة.</p>
+            </div>
+          </div>
+
+          <div>
+            <div class="card">
+              <form id="contactForm">
+                <label data-en for="name">Name</label>
+                <label data-ar for="name" style="display:none">الاسم</label>
+                <input id="name" name="name" required>
+
+                <label data-en for="msg">Message</label>
+                <label data-ar for="msg" style="display:none">الرسالة</label>
+                <textarea id="msg" name="message" rows="4" required></textarea>
+
+                <label data-en for="phone">Phone (optional)</label>
+                <label data-ar for="phone" style="display:none">الهاتف (اختياري)</label>
+                <input id="phone" name="phone">
+
+                <button type="submit" data-en>Send</button>
+                <button type="submit" data-ar style="display:none">إرسال</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Muneena Perfume — <span data-en>All rights reserved</span><span data-ar style="display:none">كل الحقوق محفوظة</span></div>
+    </footer>
+  </div>
+
+  <script>
+    // language toggle
+    const btn = document.getElementById('langBtn');
+    const html = document.documentElement;
+    const enEls = document.querySelectorAll('[data-en]');
+    const arEls = document.querySelectorAll('[data-ar]');
+    let isArabic = false;
+    function setLang(ar){
+      isArabic = ar;
+      if(ar){
+        html.lang='ar';
+        html.setAttribute('lang','ar');
+        enEls.forEach(e=>e.style.display='none');
+        arEls.forEach(e=>e.style.display='inline');
+        btn.textContent='EN / ع';
+      } else {
+        html.lang='en';
+        enEls.forEach(e=>e.style.display='inline');
+        arEls.forEach(e=>e.style.display='none');
+        btn.textContent='ع / EN';
+      }
+    }
+    btn.addEventListener('click',()=>setLang(!isArabic));
+    setLang(false);
+
+    // contact form: open WhatsApp with prefilled message
+    document.getElementById('contactForm').addEventListener('submit',function(e){
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const msg = encodeURIComponent(document.getElementById('msg').value.trim());
+      const phone = encodeURIComponent(document.getElementById('phone').value.trim());
+      const fullMsg = `Name: ${name}%0APhone: ${phone}%0AMessage: ${msg}`;
+      const wa = `https://api.whatsapp.com/send?phone=971562877616&text=${fullMsg}`;
+      window.open(wa,'_blank');
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
